@@ -1,0 +1,36 @@
+{
+  "name": "oishi",
+  "version": "1.0.1",
+  "description": "init lint config",
+  "keywords": [
+    "eslint",
+    "stylelint",
+    "jslint"
+  ],
+  "bin": {
+    "oishi": "lib/index.js"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/ --out-dir lib/"
+  },
+  "bugs": {
+    "url": "https://github.com/z2014/oishi/issues"
+  },
+  "author": "2014 <zhangchunlin02@meituan.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.12.2",
+    "shelljs": "^0.7.8"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0"
+  }
+}
