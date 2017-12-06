@@ -11,7 +11,7 @@ program
     .version(VERSION)
     .command('init')
     .option('-p, --plan [value]')
-    .description('使用husky初始化项目')
+    .description('使用Oishi初始化项目')
     .action(async (options) => {
         console.log(chalk.green('正在拉取lint config 配置 ...'));
         await fetchConfig();
@@ -25,7 +25,7 @@ program
 // 调用eslint校验js
 program
     .command('lintjs [eslintParams...]')
-    .description('使用felint检测js代码')
+    .description('使用Oishi检测js代码')
     .option('--exitcode', '使用exitcode')
     .allowUnknownOption()
     .action(function(eslintParams, options) {
@@ -53,7 +53,7 @@ program
 // 调用eslint校验css
 program
     .command('lintcss [stylelintParams...]')
-    .description('使用stylelint检测css代码')
+    .description('使用Oishi检测css代码')
     .option('--exitcode', '使用exitcode')
     .allowUnknownOption()
     .action((stylelintParams, options) => {

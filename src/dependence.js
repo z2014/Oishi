@@ -17,7 +17,7 @@ async function install() {
     const hasDependence = JSON.parse(JSON.stringify(require(process.cwd() + '/package.json'))).devDependencies;
     const dependenceList = Object.keys(config.dependence.npm);
     for(let i = 0; i <= dependenceList.length - 1; i++) {
-        if (!hasDependence[dependenceList[i]]) {
+        if (!hasDependence || !hasDependence[dependenceList[i]]) {
             await installDependence(dependenceList[i], config.dependence.npm)
         }
     }
