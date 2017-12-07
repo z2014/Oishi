@@ -1,4 +1,4 @@
-<p align="center" style="font-size: 40px;">Oishi</p>
+<h1 align="center">Oishi</h1>
 <p align="center">a simple way to eslint javascript code</p>
 
 [![npm version](https://img.shields.io/npm/v/oishi.svg?style=flat)](https://www.npmjs.com/package/oishi) [![downloads](https://img.shields.io/npm/dt/oishi.svg)](https://www.npmjs.com/package/oishi) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/z2014/oishi/pulls)
