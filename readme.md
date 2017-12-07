@@ -12,7 +12,10 @@ cd yourProject
 oishi init
 ```
 
-## 一、oishi是什么(WHAT IS oishi)
+## 二、oishi是什么(WHAT IS oishi)
 - 初始化eslint,stylelint配置文件
 - 安装eslint, stylelint相关依赖
 - 挂载git钩子，在提交代码时强检查
+
+## 三、License
+MIT
