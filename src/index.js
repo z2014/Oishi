@@ -6,6 +6,8 @@ const fetchConfig = require('./fetchConfig.js');
 const dependence = require('./dependence.js');
 const updateHooks = require('./updateHooks.js');
 const ruleFile = require('./ruleFile.js');
+const inquirer = require('inquirer');
+const createDir = require('./createDir');
 
 program
     .version(VERSION)
@@ -71,5 +73,29 @@ program
             }
         });
     });
+
+program
+    .command('create')
+    .description('使用oishi创建组件')
+    .allowUnknownOption()
+    .action(() => {
+        inquirer.prompt([
+            {
+              type: 'input',
+              name: 'name',
+              message: '需要创建的组件名字，eg: XJVideo:  '
+            }
+        ]).then((answers) => {
+            const workDirName = answers['name']
+            const reg = /^XJ/;
+            if (reg.test(workDirName)) {
+                console.log(chalk.green(`获取到${workDirName},正在创建文件夹....`));
+                createDir(workDirName);
+            } else {
+                console.log(chalk.red(`命名不符合规范，必须已XJ开头`));
+            }
+            
+        })
+    })
 
 program.parse(process.argv)
